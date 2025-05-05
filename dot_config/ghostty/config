@@ -1,0 +1,22 @@
+shell-integration = zsh
+
+theme = catppuccin-mocha
+title = "Ghostty"
+
+font-family = "Hack Nerd Font Mono"
+font-size = 16
+
+keybind = ctrl+alt+j=goto_split:down
+keybind = ctrl+alt+h=goto_split:left
+keybind = ctrl+alt+l=goto_split:right
+keybind = ctrl+alt+k=goto_split:up
+keybind = ctrl+shift+l=next_tab
+keybind = ctrl+shift+h=previous_tab
+
+unfocused-split-opacity = 0.425
+
+# fullscreen = true
+window-height = 35
+window-width = 150
+background-opacity = 0.85
+
