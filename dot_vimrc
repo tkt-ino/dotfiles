@@ -2,17 +2,19 @@ call plug#begin()
 
 " List your plugins here
 Plug 'voldikss/vim-floaterm'
+
 call plug#end()
 
 let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
 
-let mapleader = " "
+let mapleader=" "
 set number
 set hlsearch
 set tabstop=4
 set shiftwidth=4
 set autoindent
+set smartindent
 set laststatus=2
 set nobackup
 set showmatch
@@ -21,6 +23,8 @@ set list listchars=tab:>-
 syntax on
 let g:floaterm_width=0.95
 let g:floaterm_height=0.8
+
+map <C-\> :FloatermToggle <CR>
 
 noremap H ^
 noremap L $
@@ -35,7 +39,6 @@ nnoremap <Leader><Leader>j <C-w>j
 nnoremap <Leader><Leader>k <C-w>k
 nnoremap <Leader><Leader>l <C-w>l
 nnoremap <silent> <ESC><ESC> :nohl<CR>
-nnoremap <C-\> :FloatermToggle <CR>
 
 inoremap <silent> jj <ESC>
 inoremap ( ()<Left>
@@ -43,6 +46,7 @@ inoremap { {}<Left>
 inoremap [ []<Left>
 inoremap " ""<Left>
 inoremap ' ''<Left>
+inoremap <S-CR> <CR><Up>
 
 vnoremap v <C-v>
 
