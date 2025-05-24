@@ -1,30 +1,34 @@
 call plug#begin()
-
-" List your plugins here
 Plug 'voldikss/vim-floaterm'
-
+Plug 'preservim/nerdcommenter'
+Plug 'tpope/vim-commentary'
 call plug#end()
 
 let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
 
 let mapleader=" "
+
 set number
 set hlsearch
 set tabstop=4
 set shiftwidth=4
+set expandtab
 set autoindent
 set smartindent
 set laststatus=2
 set nobackup
 set showmatch
 set noswapfile
-set list listchars=tab:>-
+
 syntax on
+filetype plugin indent on
+
 let g:floaterm_width=0.95
 let g:floaterm_height=0.8
-
-map <C-\> :FloatermToggle <CR>
+let g:floaterm_shell='zsh'
+let g:floaterm_autohide=2
+let g:floaterm_keymap_toggle = '<C-\>'
 
 noremap H ^
 noremap L $
@@ -41,6 +45,7 @@ nnoremap <Leader><Leader>l <C-w>l
 nnoremap <silent> <ESC><ESC> :nohl<CR>
 
 inoremap <silent> jj <ESC>
+inoremap <silent> JJ <ESC>A
 inoremap ( ()<Left>
 inoremap { {}<Left>
 inoremap [ []<Left>
