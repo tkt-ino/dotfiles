@@ -2,6 +2,7 @@ call plug#begin()
 Plug 'voldikss/vim-floaterm'
 Plug 'preservim/nerdcommenter'
 Plug 'tpope/vim-commentary'
+Plug 'jiangmiao/auto-pairs'
 call plug#end()
 
 let &t_SI = "\e[6 q"
@@ -46,11 +47,11 @@ nnoremap <silent> <ESC><ESC> :nohl<CR>
 
 inoremap <silent> jj <ESC>
 inoremap <silent> JJ <ESC>A
-inoremap ( ()<Left>
-inoremap { {}<Left>
-inoremap [ []<Left>
-inoremap " ""<Left>
-inoremap ' ''<Left>
+" inoremap ( ()<Left>
+" inoremap { {}<Left>
+" inoremap [ []<Left>
+" inoremap " ""<Left>
+" inoremap ' ''<Left>
 inoremap <S-CR> <CR><Up>
 
 vnoremap v <C-v>
