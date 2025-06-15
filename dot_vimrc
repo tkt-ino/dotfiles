@@ -2,6 +2,7 @@ call plug#begin()
 Plug 'voldikss/vim-floaterm'
 Plug 'tpope/vim-commentary'
 Plug 'jiangmiao/auto-pairs'
+Plug 'preservim/nerdtree'
 call plug#end()
 
 let &t_SI = "\e[6 q"
@@ -29,6 +30,7 @@ let g:floaterm_height=0.8
 let g:floaterm_shell='zsh'
 let g:floaterm_autohide=2
 let g:floaterm_keymap_toggle = '<C-\>'
+let g:NERDTreeWinSize = 25
 
 noremap H ^
 noremap L $
@@ -43,6 +45,7 @@ nnoremap <Leader><Leader>j <C-w>j
 nnoremap <Leader><Leader>k <C-w>k
 nnoremap <Leader><Leader>l <C-w>l
 nnoremap <silent> <ESC><ESC> :nohl<CR>
+nnoremap <Leader>e :NERDTreeToggle<CR>
 
 inoremap <silent> jj <ESC>
 inoremap <silent> JJ <ESC>A
