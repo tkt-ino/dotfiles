@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PACKAGES="git vim curl wget"
+PACKAGES="git vim curl wget zsh"
 
 install_packages() {
     if [ -f /etc/os-release ]; then
