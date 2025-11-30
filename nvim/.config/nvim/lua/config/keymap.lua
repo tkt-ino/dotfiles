@@ -11,6 +11,9 @@ vim.keymap.set("n", "<leader>wk", "<C-w>k")
 vim.keymap.set("n", "<leader>th", "gT")
 vim.keymap.set("n", "<leader>tl", "gt")
 
+vim.keymap.set("n", "<C-h>", ":bprev<cr>", { silent = true })
+vim.keymap.set("n", "<C-l>", ":bnext<cr>", { silent = true })
+
 vim.keymap.set("n", "<esc><esc>", ":nohl<cr>", { silent = true })
 
 -- Insert mode
