@@ -9,7 +9,7 @@ local config = wezterm.config_builder()
 config.automatically_reload_config = true
 
 -- This is where you actually apply your config choices
-config.color_scheme = "Tokyo Night Moon"
+config.color_scheme = 'Kanagawa (Gogh)'
 -- config.default_prog = { "powershell" }
 config.window_background_opacity = 0.80
 config.win32_system_backdrop = "Acrylic"
