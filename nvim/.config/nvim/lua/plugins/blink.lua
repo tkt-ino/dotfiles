@@ -18,7 +18,10 @@ return {
 				preset = 'inherit',
 				['<Tab>'] = { 'show_and_insert_or_accept_single', 'select_next' },
 			},
-			completion = { menu = { auto_show = false } },
+			completion = {
+				menu = { auto_show = false },
+				ghost_text = { enabled = false },
+			},
 		},
 		appearance = {
 			nerd_font_variant = 'mono'

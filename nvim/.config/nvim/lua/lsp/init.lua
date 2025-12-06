@@ -61,37 +61,14 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 -- 	end,
 -- })
 
--- -- lua_ls.lua
--- local lua_ls_opts = require("lsp.lua_ls")
--- vim.lsp.config("lua_ls", lua_ls_opts)
--- vim.lsp.enable("lua_ls")
---
--- -- tinymist.lua
--- local tinymist_opts = require("lsp.tinymist")
--- vim.lsp.config("tinymist", tinymist_opts)
--- vim.lsp.enable("tinymist")
---
--- -- pyright.lua
--- local pyright_opts = require("lsp.pyright")
--- vim.lsp.config("pyright", pyright_opts)
--- vim.lsp.enable("pyright")
---
--- -- ruff.lua
--- local ruff_opts = require("lsp.ruff")
--- vim.lsp.config("ruff", ruff_opts)
--- vim.lsp.enable("ruff")
---
--- -- rust_analyzer.lua
--- local rust_analyzer_opts = require("lsp.rust_analyzer")
--- vim.lsp.config("rust_analyzer", rust_analyzer_opts)
--- vim.lsp.enable("rust_analyzer")
-
 local lsp = {
 	"lua_ls",
 	"tinymist",
 	"pyright",
+	-- "pyrefly",
 	"ruff",
-	"rust_analyzer"
+	"rust_analyzer",
+	"clangd",
 }
 
 for _, value in ipairs(lsp) do

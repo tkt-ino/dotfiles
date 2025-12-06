@@ -2,9 +2,13 @@ return {
 	'stevearc/oil.nvim',
 	---@module 'oil'
 	---@type oil.SetupOpts
-	opts = {},
+
+	lazy = false,
+	opts = {
+		default_file_explorer = true,
+	},
 	keys = {
 		{ "<leader>e", mode = { "n" }, ":Oil<cr>", silent = true },
 	},
-	dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if prefer nvim-web-devicons
+	dependencies = { "nvim-tree/nvim-web-devicons" },
 }
