@@ -3,10 +3,7 @@ return {
 	---@module 'oil'
 	---@type oil.SetupOpts
 
-	lazy = false,
-	opts = {
-		default_file_explorer = true,
-	},
+	opts = {},
 	keys = {
 		{ "<leader>e", mode = { "n" }, ":Oil<cr>", silent = true },
 	},
