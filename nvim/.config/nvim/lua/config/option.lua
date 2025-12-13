@@ -7,6 +7,8 @@ vim.opt.smartindent = true
 vim.opt.wrap = false
 vim.opt.signcolumn = "no"
 vim.opt.hidden = true
+vim.opt.splitright = true
+vim.opt.splitbelow = true
 
 vim.diagnostic.config({
 	virtual_lines = {
