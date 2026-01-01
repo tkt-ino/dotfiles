@@ -1,2 +1,2 @@
-[user]
-	name = tkt-ino
+[init]
+	defaultBranch = main
