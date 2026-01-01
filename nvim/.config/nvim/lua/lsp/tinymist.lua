@@ -1,4 +1,4 @@
----@brief
+---@bief
 ---
 --- https://github.com/Myriad-Dreamin/tinymist
 --- An integrated language service for Typst [taɪpst]. You can also call it "微霭" [wēi ǎi] in Chinese.
@@ -48,6 +48,10 @@ return {
 	root_markers = { '.git' },
 	settings = {
 		formatterMode = "typstfmt",
+		exportPdf = "onType",
+		formatterProseWrap = true, -- wrap lines in content mode
+		formatterPrintWidth = 80, -- limit line length to 80 if possible
+		formatterIndentSize = 2, -- indentation width
 	},
 	on_attach = function(client, bufnr)
 		for _, command in ipairs {
