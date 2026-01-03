@@ -5,6 +5,7 @@ ZSH_THEME="theunraveler"
 plugins=(
 	git
 	zsh-completions
+	zsh-autosuggestions
 	zsh-syntax-highlighting
 )
 
