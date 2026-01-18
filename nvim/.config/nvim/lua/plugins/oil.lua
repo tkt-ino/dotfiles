@@ -5,7 +5,7 @@ return {
 
 	opts = {},
 	keys = {
-		{ "<leader>e", mode = { "n" }, ":Oil<cr>", silent = true },
+		{ "<leader>e", mode = { "n" }, ":Oil --float<cr>", silent = true },
 	},
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 }

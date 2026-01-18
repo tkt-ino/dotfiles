@@ -5,6 +5,7 @@ return {
 		require("toggleterm").setup {
 			direction = 'float',
 			open_mapping = [[<c-\>]],
+			shell = "/bin/zsh",
 		}
 		vim.api.nvim_create_autocmd("VimLeavePre", {
 			callback = function()

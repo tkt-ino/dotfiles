@@ -9,6 +9,7 @@ vim.opt.signcolumn = "yes"
 vim.opt.hidden = true
 vim.opt.splitright = true
 vim.opt.splitbelow = true
+vim.opt.shell = "zsh"
 
 vim.diagnostic.config({
 	virtual_lines = {
