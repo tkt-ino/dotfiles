@@ -1,0 +1,22 @@
+[tasks.hello]
+run = "echo Hello!!"
+
+[tasks.install_rust]
+run = "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh"
+description = "Install rust"
+
+[tasks.install_oh-my-zsh]
+run = 'sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"'
+description = "Install oh-my-zsh"
+
+[tasks.install_oh-my-zsh_plugins]
+run = [
+	'git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions',
+	'git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions',
+	'git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting',
+]
+description = "Install oh-my-zsh plugins"
+
+[tasks.install_typst]
+run = "cargo install --locked typst-cli"
+description = "Install typst"
