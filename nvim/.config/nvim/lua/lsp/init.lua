@@ -37,7 +37,7 @@ local lsp = {
 	"tinymist",
 	"pyright",
 	-- "pyrefly",
-	"ruff",
+	-- "ruff",
 	"rust_analyzer",
 	"clangd",
 }

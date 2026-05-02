@@ -3,7 +3,7 @@ return {
 	version = "*",
 	config = function()
 		require("toggleterm").setup {
-			direction = 'float',
+			direction = 'horizontal',
 			open_mapping = [[<c-\>]],
 			shell = "/bin/zsh",
 		}
