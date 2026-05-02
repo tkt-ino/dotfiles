@@ -1,0 +1,11 @@
+[tools]
+fzf = "latest"
+yazi = "latest"
+neovim = "latest"
+python = "3.12.3"
+pipx = "latest"
+"pipx:ruff" = { version = "latest", depends = ["python", "pipx"]}
+"pipx:pyright" = { version = "latest", depends = ["python", "pipx"]}
+lua-language-server = "latest"
+rust-analyzer = "latest"
+lazygit = "latest"

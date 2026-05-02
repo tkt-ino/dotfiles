@@ -20,3 +20,7 @@ description = "Install oh-my-zsh plugins"
 [tasks.install_typst]
 run = "cargo install --locked typst-cli"
 description = "Install typst"
+
+[tasks.install_pwndbg]
+run = "curl --proto '=https' --tlsv1.2 -LsSf 'https://install.pwndbg.re' | sh -s -- -t pwndbg-gdb"
+description = "Install pwndbg"
