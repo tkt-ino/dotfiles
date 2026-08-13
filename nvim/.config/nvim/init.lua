@@ -2,13 +2,10 @@
 require("config.lazy")
 
 -- Option
-require("config.option")
+require("config.options")
 
 -- Keymap
-require("config.keymap")
-
--- Colorscheme
-require("config.colorscheme")
+require("config.keymaps")
 
 -- LSP
-require("lsp")
+require("config.lsp")

@@ -5,9 +5,10 @@ return {
 	build = ":TSUpdate",
 	-- enabled = false,
 	opts = function(_, opts)
-		require('nvim-treesitter').install { 'rust', 'python', 'c', 'lua', 'typst' }
+		local langs = { 'rust', 'python', 'c', 'lua', 'typst', 'typescript', 'tsx', 'javascript' }
+		require('nvim-treesitter').install(langs)
 		vim.api.nvim_create_autocmd('FileType', {
-			pattern = { 'rust', 'python', 'c', 'lua', 'typst' },
+			pattern = langs,
 			callback = function() vim.treesitter.start() end,
 		})
 	end

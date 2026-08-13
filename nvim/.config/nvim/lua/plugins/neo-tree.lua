@@ -14,7 +14,7 @@ return {
 			}
 		},
 		keys = {
-			{ "<leader>e", mode = { "n" }, ":Neotree toggle<cr>",        silent = true },
+			-- { "<leader>e", mode = { "n" }, ":Neotree toggle<cr>",        silent = true },
 			{ "<leader>b", mode = { "n" }, ":Neotree float buffers<cr>", silent = true },
 		},
 	}

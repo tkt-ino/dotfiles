@@ -1,3 +1,5 @@
+vim.cmd.colorscheme "kanagawa-wave"
+
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.tabstop = 2
@@ -10,13 +12,7 @@ vim.opt.hidden = true
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 vim.opt.shell = "zsh"
-
-vim.diagnostic.config({
-	virtual_lines = {
-		only_current_line = true,
-	}
-})
-vim.o.winborder = "rounded"
+vim.opt.winborder = "rounded"
 
 vim.opt.cursorline = true
 vim.opt.cursorcolumn = true
