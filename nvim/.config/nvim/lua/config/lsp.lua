@@ -33,9 +33,11 @@ local lsps = {
 	"tinymist",
 	"pyright",
 	-- "pyrefly",
-	-- "ruff",
+	"ruff",
 	"rust_analyzer",
 	"clangd",
+	-- "ts_ls",
+	"tsc",
 }
 
 vim.lsp.enable(lsps)
