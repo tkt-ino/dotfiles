@@ -1,10 +1,25 @@
+theme = Kanagawa Wave
+
+font-family = Hack Nerd Font Mono
+font-size = 14
+
+background-opacity = 0.95
+background-blur = true
+unfocused-split-fill = #000000
+
+fullscreen = false
+title = Ghostty
+window-decoration = auto
+
+copy-on-select = clipboard
+
+# keybinds
 keybind = ctrl+shift+r=new_split:right
 keybind = ctrl+shift+d=new_split:down
-
 keybind = ctrl+shift+h=goto_split:left
 keybind = ctrl+shift+j=goto_split:down
 keybind = ctrl+shift+k=goto_split:up
 keybind = ctrl+shift+l=goto_split:right
-
 keybind = ctrl+alt+h=previous_tab
 keybind = ctrl+alt+l=next_tab
+
