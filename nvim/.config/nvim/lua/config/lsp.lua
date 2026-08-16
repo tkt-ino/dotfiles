@@ -21,32 +21,23 @@ vim.api.nvim_create_autocmd('LspAttach', {
 	end
 })
 
--- For tinymist
-vim.api.nvim_create_autocmd("BufWritePre", {
-	pattern = "*.typ",
-	callback = function(args)
-		vim.lsp.buf.format({
-			bufnr = args.buf,
-			async = false,
-		})
-	end,
+-- vim.lsp.inlay_hint.enable(true)
+vim.diagnostic.config({
+	virtual_lines = {
+		only_current_line = true,
+	}
 })
 
-local lsp = {
+local lsps = {
 	"lua_ls",
 	"tinymist",
 	"pyright",
 	-- "pyrefly",
-	-- "ruff",
+	"ruff",
 	"rust_analyzer",
 	"clangd",
+	-- "ts_ls",
+	"tsc",
 }
 
-for _, value in ipairs(lsp) do
-	local path = "lsp." .. value
-	local lsp_opts = require(path)
-	vim.lsp.config(value, lsp_opts)
-	vim.lsp.enable(value)
-end
-
-vim.lsp.inlay_hint.enable(true)
+vim.lsp.enable(lsps)

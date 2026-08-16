@@ -7,14 +7,15 @@ return {
 			"MunifTanjim/nui.nvim",
 			"nvim-tree/nvim-web-devicons", -- optional, but recommended
 		},
-		lazy = false,                 -- neo-tree will lazily load itself
+		enabled = false,
+		lazy = false, -- neo-tree will lazily load itself
 		opts = {
 			window = {
 				width = 30,
 			}
 		},
 		keys = {
-			{ "<leader>e", mode = { "n" }, ":Neotree toggle<cr>",        silent = true },
+			-- { "<leader>e", mode = { "n" }, ":Neotree toggle<cr>",        silent = true },
 			{ "<leader>b", mode = { "n" }, ":Neotree float buffers<cr>", silent = true },
 		},
 	}
