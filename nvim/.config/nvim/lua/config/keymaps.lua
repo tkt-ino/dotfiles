@@ -16,6 +16,8 @@ vim.keymap.set("n", "<C-l>", ":bnext<cr>", { silent = true })
 
 vim.keymap.set("n", "<esc><esc>", ":nohl<cr>", { silent = true })
 
+vim.keymap.set("n", "<C-\\>", ":term<cr>a", { silent = true })
+
 -- Insert mode
 vim.keymap.set("i", "jj", "<esc>")
 
@@ -27,4 +29,4 @@ vim.keymap.set('t', "<C-w>h", "<cmd>wincmd h<cr>")
 vim.keymap.set('t', "<C-w>j", "<cmd>wincmd j<cr>")
 vim.keymap.set('t', "<C-w>k", "<cmd>wincmd k<cr>")
 vim.keymap.set('t', "<C-w>l", "<cmd>wincmd l<cr>")
-vim.keymap.set('t', "jj", "<C-\\><C-n>")
+vim.keymap.set('t', "<esc>", "<C-\\><C-n>")
