@@ -1,6 +1,7 @@
-###############################
-# oh my zsh
-###############################
+### mise ###
+eval "$(~/.local/bin/mise activate zsh)"
+
+### oh my zsh ###
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="gozilla"
 plugins=(
@@ -12,22 +13,15 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 alias ohmyzsh="mate ~/.oh-my-zsh"
 
-###############################
-# env
-###############################
-export PATH=$PATH:/opt/nvim/bin
+### env ###
 export EDITOR=nvim
 
-###############################
-# alias
-###############################
+### alias ###
 alias v='nvim'
 alias vi='nvim'
 alias vim='nvim'
 
-###############################
-# yazi
-###############################
+### yazi ###
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	command yazi "$@" --cwd-file="$tmp"
@@ -36,12 +30,6 @@ function y() {
 	rm -f -- "$tmp"
 }
 
-###############################
-# mise
-###############################
-eval "$(mise activate zsh)"
-
-###############################
-# fzf
-###############################
+### fzf ###
 eval "$(fzf --zsh)"
+
