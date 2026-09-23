@@ -1,0 +1,7 @@
+[dotfiles]
+"~/.config/ghostty" = { source = "ghostty/.config/ghostty", mode = "copy" }
+"~/.config/yazi" = { source = "yazi/.config/yazi", mode = "copy" }
+"~/.config/wezterm" = { source = "wezterm/.config/wezterm", mode = "copy" }
+"~/.config/mise" = { source = "mise/.config/mise", mode = "copy" }
+"~/.config/nvim" = { source = "nvim/.config/nvim", mode = "copy" }
+"~/.zshrc" = { source = "zsh/.zshrc", mode = "copy" }
