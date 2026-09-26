@@ -1,7 +1,38 @@
+[bootstrap.packages]
+"apt:curl" = "latest"
+"apt:wget" = "latest"
+"apt:git" = "latest"
+"apt:zsh" = "latest"
+"apt:unzip" = "latest"
+"apt:build-essential" = "latest"
+
+[tools]
+neovim = "latest"
+fzf = "latest"
+yazi = "latest"
+rust = "latest"
+lazygit = "latest"
+typst = "latest"
+resvg = "latest"
+cargo-binstall = "latest"
+
 [dotfiles]
+"~/.config/mise/config.toml" = { source = "mise.toml", mode = "copy" }
 "~/.config/ghostty" = { source = "ghostty/.config/ghostty", mode = "copy" }
 "~/.config/yazi" = { source = "yazi/.config/yazi", mode = "copy" }
 "~/.config/wezterm" = { source = "wezterm/.config/wezterm", mode = "copy" }
-"~/.config/mise" = { source = "mise/.config/mise", mode = "copy" }
 "~/.config/nvim" = { source = "nvim/.config/nvim", mode = "copy" }
 "~/.zshrc" = { source = "zsh/.zshrc", mode = "copy" }
+
+[tasks.bootstrap]
+run = [
+	"git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions",
+	"git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions",
+	"git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting",
+ 	"curl --proto '=https' --tlsv1.2 -LsSf 'https://install.pwndbg.re' | sh -s -- -t pwndbggdb",
+	"cargo binstall tree-sitter-cli",
+]
+
+[bootstrap.hooks.final]
+run = 'sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"'
+
