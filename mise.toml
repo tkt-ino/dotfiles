@@ -24,12 +24,16 @@ cargo-binstall = "latest"
 "~/.config/nvim" = { source = "nvim/.config/nvim", mode = "copy" }
 "~/.zshrc" = { source = "zsh/.zshrc", mode = "copy" }
 
-[tasks.bootstrap]
+[tasks.install_oh-my-zsh_plugins]
 run = [
 	"git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions",
 	"git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions",
 	"git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting",
- 	"curl --proto '=https' --tlsv1.2 -LsSf 'https://install.pwndbg.re' | sh -s -- -t pwndbggdb",
+]
+
+[tasks.bootstrap]
+run = [
+ 	"curl --proto '=https' --tlsv1.2 -LsSf 'https://install.pwndbg.re' | sh -s -- -t pwndbg-gdb",
 	"cargo binstall tree-sitter-cli",
 ]
 
